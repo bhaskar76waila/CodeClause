@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(235, 235, 42)6, 116, 75);
+}
+
+/* ##########   Nav Bar styling  ########### */
+#wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+.container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+.navbar {
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.navbar .logo1 img{
+    height: 100px;
+    width: 200px;
+    object-fit: contain;
+    
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover{
+    font-weight: bold;
+    transition: 1s;   
+}
+
+    /* ########### section 1 ########### */
+
+.section1{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left1{
+    margin: auto;
+}
+
+.left1 .hello{
+    font-size: 1.2rem;
+    font-weight:400;
+    padding-left: 5px;
+}
+
+.left1 span{
+    font-weight: bolder;
+    color: rgb(59, 59, 255);
+}
+
+.left1 h1{
+    margin: 5px;
+}
+
+.left1 .para{
+    /* font-size: 1.4rem;
+    font-weight: 800; */
+    margin-bottom: 10px;
+}
+
+.btn1{
+    background-color: rgb(254, 65, 65);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1;
+}
+  
+.btn1::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.8s;
+}
+  
+.btn1:hover::before {
+transform: scaleX(1);
+} 
+
+.btn1:hover {
+    border: solid 3px rgb(254, 65, 65);
+    color: black;
+  }
+
+.user-image {
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: scaleImage 5s linear infinite;
+}
+
+@keyframes scaleImage {
+
+    0% {
+      transform: scale(0.8);
+      filter: grayscale(0);
+    }
+  
+    50% {
+      transform: scale(0.9);
+      filter: grayscale(1);
+      box-shadow: 3px 3px 10px black;
+    }
+  
+    100% {
+      transform: scale(0.8);
+      filter: grayscale(0);
+    }
+  }
+
+
+
+            /*-------- section------ 2 */
+.skillspara{
+    position: relative;
+}
+
+.skillspara .sp{
+    position: absolute;
+    font-size: 4rem;
+    font-weight:bold;
+    left: 41%;
+    top: 18%;
+    color: #3639dc;
+    border-bottom: 2px solid aquamarine;
+}
+
+.section2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+}
+  
+.left2{
+    width: 30%;
+    height: 30%;
+    margin: auto;
+}
+
+.left2 h2{
+    font-size: 50px;
+    color: rgb(255, 71, 71);
+}
+.left2 h2 .caps{
+    font-size: 80px;
+}
+
+.left2 p{
+    word-spacing: 3px;
+}
+
+.right2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo2{
+    width: 70px;
+    transition: all 0.5s;
+}
+.logo2:hover{
+    transform: scale(1.2);
+}
+
+/* ################ project section############### */
+.projecth{
+    position: relative;
+    margin: 10rem 0;
+}
+
+.projecth .ppro{
+    position: absolute;
+    left: 40%;
+    top: -12.4%;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgb(216, 215, 214);
+    
+}
+
+.projectsec{
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(216, 215, 214);
+    /* flex-wrap: nowrap; */
+    /* justify-content: space-ar; */
+    align-items: center;
+}
+.projectsec .pjt{
+    width: 30%;
+    height: 30%;
+    margin: 0 auto;
+}
+.projectsec .pjt img{
+    object-fit: cover;
+    width: 99%;
+    height: 100%;
+}
+
+.projectsec .pjt:hover{
+    scale: 1.1;
+    transition: all 1s;
+}
+.projectsec .pjt p{
+    font-size: large;
+    font-weight: bold;
+}
+
+
+
+       /* ############ contact ########### */
+.contact{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cntct{
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 71, 71);
+    border-bottom: 2px solid lightgreen;
+}
+
+.contact form label{
+    font-size: 1.2rem;
+}
+
+
+   /* ##### FOoter ###### */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12rem;
+    width: 100%;
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.footer ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.icons{
+    padding: 10px;
+}
+
+.icons1 .ic{
+    margin-left: 15px;
+    padding: auto;
+    color: white;
+}
+
+
+.icons1 .ic:hover{
+    color: white;
+    font-size: 2.5rem;
+    transition: all 1s ease-in-out;
+}
+</style>
+</head>
+<body>
+     <div class="wrapper">
+        <div class="container">
+            <!-- nav bar -->
+            <div class="navbar" id="home">
+                <div class="logo1">
+                    <img src="./images/logo1.png" alt="">
+                </div>
+
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#skill">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#project">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+
+                 <!-- about section -->
+            <div class="section1" id="about">
+                <div class="left1">
+                    <p class="hello">Hello,</p>
+                    <h1>I'm &nbsp; <span> Puneet Kaushik</span></h1>
+                    <p class="para">This is my official Portfolio website to shows<br>
+                        all details and experience</p>
+                    <button class="btn1">Know more</button>
+                </div>
+
+                <div class="right1 user-image">
+                    <img src="./images/1687940441035.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- skill section -->
+            <div class="skillspara">
+                <p class="sp">Skills</p>
+            <div class="section2" id="skill">
+                <div class="left2">
+                    <h2><span class="caps">M</span>e and <br>
+                        MyTech stack</h2>
+                    <p>
+                        Hi Everyone My name is BHASKAR WAILA. I am  Web Developer. <br> I have been building skills in last few years and </p><p>Currently 
+                        I am working with COSECLAUSE as a intern.  Currently I am working on Javascript and Making Beautiful projects </p>
+                </div>
+
+                <div class="right2">
+                    <img src="./images/HTML.png" alt="" class="logo2">
+                    <img src="./images/CSS.png" alt="" class="logo2">
+                    <img src="./images/Tailwind.png" alt="" class="logo2">
+                    <img src="./images/Javascript.svg" alt="" class="logo2">
+                    <img src="./images/Git.svg" alt="" class="logo2">
+                    <img src="./images/Github.svg" alt="" class="logo2">
+                </div>
+            </div>
+            </div>
+            </div>
+            <!-- project section  -->
+            <div class="projecth">
+                <p class="ppro" id="project">Projects</p>
+            <div class="projectsec">
+                <div  class="pjt">
+                    <img src="./images/tour.png" alt="">
+                    <p>tour and travel website</p>
+                </div>
+                <div class="pjt">
+                    <img src="./images/razor.png" alt="">
+                    <p>The Razorpay_clone website</p>
+                </div>
+                <div class="pjt">
+                    <img src="./images/p3.jpg" alt="">
+                    <p>Boys Fashion E-commerce</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- contact section -->
+        <div class="container">
+            <div class="contact" id="contact">
+                <div>
+                    <p class="cntct">Contact me</p> <br>
+                    <form action="">
+                        <label for="fname">Enter name=</label>
+                        <input type="text" id="fname" placeholder="Enter your name">
+                        <br> <br>
+                        <label for="email">Enter Email=</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                        <br><br>
+                        <label for="tele">Phone number</label>
+                        <input type="tel" id="tele" placeholder="Phone number">
+                        <br><br>
+                        <textarea name="" id="" cols="36" rows="10" placeholder="Enter your message here"></textarea>
+                        <br><br>
+                        <button class="btn1">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section  -->
+        <div class="footer">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#skill">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#project">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div>
+                <div class="icons1">
+                    <i class="ic fa-brands  fa-2x fa-facebook"></i>
+                    <i class="ic fa-brands fa-2x fa-instagram"></i>
+                    <i class="ic fa-brands fa-2x fa-youtube"></i>
+                    <i class="ic fa-brands fa-2x fa-twitter"></i>
+                </div>
+
+            </div>
+        </div>
+        
+
+     </div>
+</body>
+</html>
